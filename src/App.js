@@ -1,10 +1,15 @@
-import './App.css';
 import { useEffect, useState } from 'react';
-import SearchInput from './SearchInput';
+
+import './App.css';
+
+import SearchInput from './components/SearchInput/SearchInput';
+import Button from './components/Button/Button';
+import Modal from './components/Modal/Modal';
 
 function App() {
   const [info, setInfo] = useState({});
   const [movie, setMovie] = useState('');
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
     if (movie) {
@@ -26,9 +31,25 @@ function App() {
         onChange={(search) => setMovie(search)}
       />
       {info.movies && (
-        <ul>
+        <ul className="list">
           {info.movies.map((movie) => (
-            <li>{movie.title}</li>
+            <li className="list2">
+              <img
+                src={movie.medium_cover_image}
+                alt={movie.title}
+                onClick={() => setIsModalVisible(true)}
+              />
+              {isModalVisible ? (
+                <Modal onClose={() => setIsModalVisible(false)}>
+                  {movie.title}
+                  <a href={movie.torrents[0].url}>
+                    <Button text="Download" />
+                  </a>
+                </Modal>
+              ) : (
+                `${movie.title}`
+              )}
+            </li>
           ))}
         </ul>
       )}
