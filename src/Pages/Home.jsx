@@ -31,6 +31,11 @@ const Home = () => {
     }
   }, [movie]);
 
+  function openWindow(embed) {
+    // if ()
+    window.open(`https://www.youtube.com/watch?v=${embed}`);
+  }
+
   return (
     <div className="App">
       <div className="title-website">
@@ -86,11 +91,14 @@ const Home = () => {
               </div>
               <div className="synopse-movie">{modalMovie.synopsis}</div>
               <div className="btn-movie">
-                <a
-                  href={`https://www.youtube.com/watch?v=${modalMovie.yt_trailer_code}`}
-                >
-                  <Button text="Trailler" />
-                </a>
+                <Button
+                  text="Trailler"
+                  onClick={() => {
+                    window.open(
+                      `https://www.youtube.com/watch?v=${modalMovie.yt_trailer_code}`,
+                    );
+                  }}
+                />
                 <a href={modalMovie.torrents[0].url}>
                   <Button text="Download 720p" />
                 </a>
