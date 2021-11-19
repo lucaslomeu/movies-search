@@ -1,8 +1,6 @@
 <h1 align="center"> MovieSearch </h1>
 
-<p align="center">
-    [Preview](https://movies-search-r0kc7pvct-lucaslomeu.vercel.app/)
-</p>
+Confira o [Preview](https://movies-search-r0kc7pvct-lucaslomeu.vercel.app/) desse projeto!
 
 <br>
 
