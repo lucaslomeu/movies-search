@@ -31,11 +31,6 @@ const Home = () => {
     }
   }, [movie]);
 
-  function openWindow(embed) {
-    // if ()
-    window.open(`https://www.youtube.com/watch?v=${embed}`);
-  }
-
   return (
     <div className="App">
       <div className="title-website">
