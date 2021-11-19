@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+
+  .title-website {
+    font-size: 1.5rem;
+    margin: 0;
+
+    h1:hover {
+      color: #a9333a;
+      cursor: pointer;
+    }
+  }
+
+  .container-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    gap: 3rem;
+
+    .content-movies {
+      display: flex;
+      flex-direction: column;
+      max-width: 230px;
+      margin-bottom: 1rem;
+
+      .movie-title {
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      img {
+        border-radius: 10px;
+
+        &:hover {
+          outline: 3px solid rgba(238, 235, 221, 0.8);
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        .movie-title {
+          color: #a9333a;
+        }
+      }
+    }
+  }
+}
