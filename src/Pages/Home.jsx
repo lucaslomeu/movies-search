@@ -6,6 +6,9 @@ import SearchInput from '../components/SearchInput/SearchInput';
 import Button from '../components/Button/Button';
 import Modal from '../components/Modal/Modal';
 
+import { RiMovie2Fill } from 'react-icons/ri';
+import { BsStarHalf } from 'react-icons/bs';
+
 const Home = () => {
   const [info, setInfo] = useState({});
   const [movie, setMovie] = useState('');
@@ -31,6 +34,9 @@ const Home = () => {
   return (
     <div className="App">
       <div className="title-website">
+        <div className="icon-title">
+          <RiMovie2Fill />
+        </div>
         <h1>Movies Search</h1>
       </div>
       <SearchInput
@@ -66,9 +72,12 @@ const Home = () => {
               />
             </div>
             <div className="info-modal">
-              <div className="title-movie">
-                {modalMovie.title}
-                <div className="rating-movie">{modalMovie.rating}</div>
+              <div className="title-movie">{modalMovie.title}</div>
+              <div className="rating-movie">
+                {modalMovie.rating}
+                <div className="rating-icon">
+                  <BsStarHalf />
+                </div>
               </div>
               <div className="genre-movie">
                 {modalMovie.genres.map((genre, i, arr) =>
