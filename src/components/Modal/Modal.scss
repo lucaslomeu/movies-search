@@ -60,6 +60,7 @@
         align-items: flex-start;
         text-align: left;
         padding: 0 20px;
+        position: relative;
 
         .title-movie {
           font-weight: bold;
@@ -91,8 +92,11 @@
           font-style: italic;
         }
 
-        .download-movie {
-          padding: 10px 0;
+        .btn-movie {
+          padding: 20px 0;
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
         }
       }
     }

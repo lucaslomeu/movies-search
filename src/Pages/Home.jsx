@@ -76,7 +76,12 @@ const Home = () => {
                 )}
               </div>
               <div className="synopse-movie">{modalMovie.synopsis}</div>
-              <div className="download-movie">
+              <div className="btn-movie">
+                <a
+                  href={`https://www.youtube.com/watch?v=${modalMovie.yt_trailer_code}`}
+                >
+                  <Button text="Trailler" />
+                </a>
                 <a href={modalMovie.torrents[0].url}>
                   <Button text="Download 720p" />
                 </a>
