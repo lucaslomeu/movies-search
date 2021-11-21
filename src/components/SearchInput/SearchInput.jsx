@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { HiOutlineSearchCircle } from 'react-icons/hi';
+
 import './SearchInput.scss';
 
 const SearchInput = ({ onChange }) => {
@@ -13,13 +15,24 @@ const SearchInput = ({ onChange }) => {
     }
   }
 
+  function handleClick() {
+    let inputValue = document.querySelector('input.search-input').value;
+    onChange(inputValue);
+  }
+
   return (
-    <input
-      className="search-input"
-      type="search"
-      onKeyPress={change}
-      placeholder="Search for a movie"
-    />
+    <>
+      <input
+        className="search-input"
+        type="search"
+        onKeyPress={change}
+        placeholder="Search for a movie"
+      />
+
+      <button type="submit" className="search-btn" onClick={handleClick}>
+        {<HiOutlineSearchCircle />}
+      </button>
+    </>
   );
 };
 

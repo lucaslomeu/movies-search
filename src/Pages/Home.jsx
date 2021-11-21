@@ -8,7 +8,6 @@ import Modal from '../components/Modal/Modal';
 
 import { RiMovie2Fill } from 'react-icons/ri';
 import { BsStarHalf } from 'react-icons/bs';
-import { HiOutlineSearchCircle } from 'react-icons/hi';
 
 const Home = () => {
   const [info, setInfo] = useState({});
@@ -41,19 +40,12 @@ const Home = () => {
         <h1>Movies Search</h1>
       </div>
       <div className="searchBar">
-        <SearchInput type="text" onChange={(search) => setMovie(search)} />
-
-        <Button
-          type="submit"
-          className="search-btn"
-          text={<HiOutlineSearchCircle />}
-          onCLick={(search) => setMovie(search)}
-        />
+        <SearchInput onChange={(search) => setMovie(search)} />
       </div>
       {info.movies && (
         <ul className="container-movies">
-          {info.movies.map((movie) => (
-            <li className="content-movies">
+          {info.movies.map((movie, id) => (
+            <li key={id} className="content-movies">
               <img
                 src={movie.medium_cover_image}
                 alt={movie.title}

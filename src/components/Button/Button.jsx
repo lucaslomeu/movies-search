@@ -2,14 +2,9 @@ import React from 'react';
 
 import './Button.scss';
 
-const Button = ({ text, type, className, onClick }) => {
-  function handleChange(e) {
-    e.preventDefault();
-    console.log(e);
-  }
-
+const Button = ({ text, type, className }) => {
   return (
-    <button type={type} className={className} onClick={handleChange}>
+    <button type={type} className={className}>
       {text}
     </button>
   );
