@@ -94,14 +94,26 @@ const Home = () => {
                     );
                   }}
                 />
-                <Button
-                  type="text"
-                  className="btn"
-                  text="Download 720p"
-                  onClick={() => {
-                    window.open(modalMovie.torrents[0].url, '_self');
-                  }}
-                />
+                {modalMovie.torrents[0] && (
+                  <Button
+                    type="text"
+                    className="btn"
+                    text="Download 720p"
+                    onClick={() => {
+                      window.open(modalMovie.torrents[0].url, '_self');
+                    }}
+                  />
+                )}
+                {modalMovie.torrents[1] && (
+                  <Button
+                    type="text"
+                    className="btn"
+                    text="Download 1080p"
+                    onClick={() => {
+                      window.open(modalMovie.torrents[1].url, '_self');
+                    }}
+                  />
+                )}
               </div>
             </div>
           </div>
