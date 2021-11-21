@@ -12,3 +12,18 @@
     background-color: #ff4a55;
   }
 }
+
+.search-btn {
+  height: 35px;
+  width: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #a9333a;
+  cursor: pointer;
+  margin-left: 0.3rem;
+  font-size: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -8,6 +8,7 @@ import Modal from '../components/Modal/Modal';
 
 import { RiMovie2Fill } from 'react-icons/ri';
 import { BsStarHalf } from 'react-icons/bs';
+import { HiOutlineSearchCircle } from 'react-icons/hi';
 
 const Home = () => {
   const [info, setInfo] = useState({});
@@ -39,11 +40,16 @@ const Home = () => {
         </div>
         <h1>Movies Search</h1>
       </div>
-      <SearchInput
-        type="text"
-        value={movie}
-        onChange={(search) => setMovie(search)}
-      />
+      <div className="searchBar">
+        <SearchInput type="text" onChange={(search) => setMovie(search)} />
+
+        <Button
+          type="submit"
+          className="search-btn"
+          text={<HiOutlineSearchCircle />}
+          onCLick={(search) => setMovie(search)}
+        />
+      </div>
       {info.movies && (
         <ul className="container-movies">
           {info.movies.map((movie) => (
@@ -87,6 +93,8 @@ const Home = () => {
               <div className="synopse-movie">{modalMovie.synopsis}</div>
               <div className="btn-movie">
                 <Button
+                  type="text"
+                  className="btn"
                   text="Trailler"
                   onClick={() => {
                     window.open(
@@ -95,7 +103,7 @@ const Home = () => {
                   }}
                 />
                 <a href={modalMovie.torrents[0].url}>
-                  <Button text="Download 720p" />
+                  <Button type="text" className="btn" text="Download 720p" />
                 </a>
               </div>
             </div>

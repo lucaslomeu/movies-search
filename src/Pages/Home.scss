@@ -17,6 +17,14 @@
     }
   }
 
+  .searchBar {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
   .container-movies {
     display: flex;
     flex-wrap: wrap;

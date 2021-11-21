@@ -2,18 +2,23 @@ import React from 'react';
 
 import './SearchInput.scss';
 
-const SearchInput = ({ value, onChange }) => {
+const SearchInput = ({ onChange }) => {
   function handleChange(e) {
     onChange(e.target.value);
+  }
+
+  function change(e) {
+    if (e.key === 'Enter') {
+      handleChange(e);
+    }
   }
 
   return (
     <input
       className="search-input"
       type="search"
-      value={value}
-      onChange={handleChange}
-      placeholder="Search for movies"
+      onKeyPress={change}
+      placeholder="Search for a movie"
     />
   );
 };
