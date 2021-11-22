@@ -8,6 +8,7 @@ import Modal from '../components/Modal/Modal';
 
 import { RiMovie2Fill } from 'react-icons/ri';
 import { BsStarHalf } from 'react-icons/bs';
+import { AiOutlineClose } from 'react-icons/ai';
 
 const Home = () => {
   const [info, setInfo] = useState({});
@@ -70,7 +71,10 @@ const Home = () => {
               />
             </div>
             <div className="info-modal">
-              <div className="title-movie">{modalMovie.title}</div>
+              <div className="title-movie">
+                {modalMovie.title}
+                <AiOutlineClose />
+              </div>
               <div className="rating-movie">
                 {modalMovie.rating}
                 <div className="rating-icon">
