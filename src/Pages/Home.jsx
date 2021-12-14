@@ -73,7 +73,12 @@ const Home = () => {
             <div className="info-modal">
               <div className="title-movie">
                 {modalMovie.title}
-                <AiOutlineClose />
+                <div
+                  className="btn-close"
+                  onClick={() => setIsModalVisible(false)}
+                >
+                  <AiOutlineClose />
+                </div>
               </div>
               <div className="rating-movie">
                 {modalMovie.rating}
