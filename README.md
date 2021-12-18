@@ -5,8 +5,8 @@ Confira o [Preview](https://movies-search-azure.vercel.app/) desse projeto!
 <br>
 
 <h1 align="center">
-  <img alt="Dash Login"  src=".github/full.png" />
-  <img alt="Dash Modal"  src=".github/modal.png" />
+  <img alt="Dash Login"  src=".github/FullPage.png" />
+  <img alt="Dash Modal"  src=".github/ModalPage.png" />
 </h1>
 
 <br>
