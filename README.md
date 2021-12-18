@@ -1,12 +1,12 @@
 <h1 align="center"> MovieSearch </h1>
 
-Confira o [Preview](https://movies-search-r0kc7pvct-lucaslomeu.vercel.app/) desse projeto!
+Confira o [Preview](https://movies-search-azure.vercel.app/) desse projeto!
 
 <br>
 
 <h1 align="center">
   <img alt="Dash Login"  src=".github/full.png" />
-  <img alt="Dash Modal"  src=".github/Modal.png" />
+  <img alt="Dash Modal"  src=".github/modal.png" />
 </h1>
 
 <br>
@@ -22,10 +22,24 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Foi desenvolvido um site de busca de filmes utilizando a api [YTS](https://yts.mx/api), onde é possível obter informações e até mesmo realizar o download via torrent.
 
-## Rodando o Projeto
+### 🛠 Tecnologias
 
-No diretório, você utiliza o comando:
+As seguintes ferramentas foram usadas na construção do projeto:
 
-### `yarn start`
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [SASS](https://sass-lang.com/)
+
+```bash
+# Clone este repositório
+$ git clone <https://github.com/lucaslomeu/movies-search>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd movies-search
+
+# Instale as dependências
+$ npm install ou
+$ yarn add
+```
 
 Abra [http://localhost:3000](http://localhost:3000) para ver no seu navegador.

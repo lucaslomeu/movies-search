@@ -71,15 +71,8 @@ const Home = () => {
               />
             </div>
             <div className="info-modal">
-              <div className="title-movie">
-                {modalMovie.title}
-                <div
-                  className="btn-close"
-                  onClick={() => setIsModalVisible(false)}
-                >
-                  <AiOutlineClose />
-                </div>
-              </div>
+              <div className="title-movie">{modalMovie.title}</div>
+
               <div className="rating-movie">
                 {modalMovie.rating}
                 <div className="rating-icon">
@@ -124,6 +117,9 @@ const Home = () => {
                   />
                 )}
               </div>
+            </div>
+            <div className="btn-close" onClick={() => setIsModalVisible(false)}>
+              <AiOutlineClose />
             </div>
           </div>
         </Modal>
