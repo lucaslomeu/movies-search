@@ -11,18 +11,11 @@ Confira o [Preview](https://movies-search-azure.vercel.app/) desse projeto!
 
 <br>
 
-## 🚀 Tecnologias
-
-Esse projeto foi desenvolvido com as seguintes tecnologias:
-
-- ReactJs
-- SASS
-
 ## 💻 Projeto
 
 Foi desenvolvido um site de busca de filmes utilizando a api [YTS](https://yts.mx/api), onde é possível obter informações e até mesmo realizar o download via torrent.
 
-### 🛠 Tecnologias
+### 🚀 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
